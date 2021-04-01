@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/bin/www",
-    "dev": "nodemon ./src/bin/www",
+    "db:migrate": "npx sequelize db:migrate",
+    "start": "cross-env NODE_ENV=production npm run db:migrate && node ./src/bin/www",
+    "dev": "cross-env NODE_ENV=development npm run db:migrate && nodemon ./src/bin/www",
     "test:server": "mocha test/server.test.js --timeout 10000 --exit",
     "lint": "eslint .",
     "test": "cross-env NODE_ENV=test npx sequelize db:drop && sequelize db:create --env test && sequelize db:migrate --env test && mocha --timeout 10000 --exit"
