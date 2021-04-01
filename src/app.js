@@ -22,7 +22,7 @@ app.use('/api/v1', (req, res) => {
   res.status(200).json({
     success: true,
     message:
-      'You are in the home route, refer to documentation for proper routing',
+      'You are in the home route, refer to documentation @ https://documenter.getpostman.com/view/11688875/TzCP5mXT for proper routing',
   });
 });
 
