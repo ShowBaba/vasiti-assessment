@@ -14,17 +14,22 @@ module.exports = {
     password: null,
     database: 'database_test',
     host: '127.0.0.1',
-    dialect: 'mysql'
+    dialect: 'mysql',
   },
+  /*
+  NOTE: I resolved to a postgresql dialet
+  because heroku requires a billing information to
+  add their free ClearDB add on
+  */
   production: {
     use_env_variable: 'DATABASE_URL',
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false
-      }
+        rejectUnauthorized: false,
+      },
     },
-    logging: false
-  }
+    logging: false,
+  },
 };

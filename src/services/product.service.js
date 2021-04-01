@@ -1,5 +1,4 @@
 const models = require('../db/models');
-const productSchema = require('../schemas/product.schema');
 
 const { Product, ProductVarieties } = models;
 
