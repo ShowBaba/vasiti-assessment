@@ -43,6 +43,7 @@ module.exports = {
       variety.productId = id;
       return variety;
     });
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < product_varieties.length; i++) {
       const variety = product_varieties[i];
       // eslint-disable-next-line no-await-in-loop
